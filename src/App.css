@@ -1,38 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 .App {
-  text-align: center;
+  background-color: black;
+  font-family: "Urbanist", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register {
+  width: 1400px;
+  height: 1024px;
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: 60px;
+  background: white;
+  margin: auto;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.register {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.register::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.form {
+  padding: 45px 54px;
+  height: 1024px;
+}
+
+.image {
+  width: 692px;
+  height: 1024px;
+  overflow-x: hidden;
+
+  img {
+    height: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+
+  img {
+    width : 166px;
+    height: 51px;
+  }
+}
+
+.details {
+  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: calc(82px + 20px);
+  gap: 2rem;
+  width: calc(420px - 54px);
+  margin-left: 163px;
+
+  .heading h2 {
+    font-size: 68px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 0.7;
+  }
+
+  .heading p {
+    font-size: 24px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FEC00F;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.details p, .details h2 {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  display: block;
+  width: 100%;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.3rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  padding: 29px 19px 24px;
+  text-align: start;
+}
+
+input::placeholder {
+  color: #2E2E2E;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+}
+
+button[type="submit"] {
+  border-radius: 2rem;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+button img {
+  height: 15px;
+  margin: auto 1rem;
+}
+
+#g-btn {
+  margin-top: 20px;
+  /* padding: 0.5rem; */
+  height: 52px;
+  width: 100%;
 }
