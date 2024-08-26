@@ -23,7 +23,7 @@ export default function Register() {
             body: JSON.stringify(user)
         }).then(async res => {
             res = await res.json();
-            // console.log("res", re s);
+            console.log("res", res);
             // navigate("/profile");
         });
 
