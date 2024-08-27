@@ -24,7 +24,7 @@ export default function Register() {
         }).then(async res => {
             res = await res.json();
             console.log("res", res);
-            // navigate("/profile");
+            navigate("/welcome");
         });
 
     }
