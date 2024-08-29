@@ -36,8 +36,8 @@ export default function Register() {
 
         const user = { name, email, password }
 
-        const url = 'http://localhost:3500/api/users/'
-        // const url = 'https://signup-backend-0d4p.onrender.com/api/users/'
+        // const url = 'http://localhost:3500/api/users/'
+        const url = 'https://signup-backend-0d4p.onrender.com/api/users/'
         return fetch(url, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },

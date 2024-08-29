@@ -8,8 +8,8 @@ export default function Succesful() {
     const [message, setMessage] = useState("undefined");
 
     // fetch - url /api/profile (send all details)
-    const url = 'http://localhost:3500/api/users/profile/'
-    // const url = 'https://signup-backend-0d4p.onrender.com/api/users/profile/'
+    // const url = 'http://localhost:3500/api/users/profile/'
+    const url = 'https://signup-backend-0d4p.onrender.com/api/users/profile/'
     useEffect(() => {
         fetch(url).then(async res => {
             if (res.ok) {
