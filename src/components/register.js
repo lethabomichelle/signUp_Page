@@ -6,6 +6,7 @@ import logo from './images/logo.png';
 import glogo from './images/glogo.png';
 import { useNavigate } from "react-router-dom";
 import validator from 'validator'
+import { useGoogleLogin } from '@react-oauth/google';
 
 export default function Register() {
     const navigate = useNavigate();
@@ -13,6 +14,10 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [password, setPassword] = useState('');
+
+    const login = useGoogleLogin({
+        onSuccess: tokenResponse => console.log(tokenResponse),
+    });
 
     // Email Validation
     const validateEmail = () => {
@@ -58,7 +63,7 @@ export default function Register() {
                             <h2>SIGN UP</h2>
                             <p>Create an account to get started.</p>
                         </div>
-                        <button id="g-btn">
+                        <button id="g-btn" onClick={() => login()}>
                             <img src={glogo} alt="google logo" />Continue With Google
                         </button>
                         <div className="separation">Or</div>
