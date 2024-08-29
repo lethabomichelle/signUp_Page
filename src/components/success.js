@@ -15,7 +15,7 @@ export default function Succesful() {
             if (res.ok) {
                 setMessage(await res.json().message);
             } else {
-                setMessage("not allowed")
+                setMessage("Welcome")
             }
         }).catch(e => console.log(e))
     }, [id]);
